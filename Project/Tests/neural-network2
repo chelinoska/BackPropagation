@@ -1,0 +1,109 @@
+digraph G {
+ 
+rankdir=LR
+splines=line
+node [fixedsize=true, label=""];
+ 
+subgraph cluster_0 {
+color=white;
+node [style=solid,color=blue4, shape=circle];
+x1 x2 x3 x4;
+label = "layer 1 (Input layer)";
+}
+ 
+subgraph cluster_1 {
+color=white;
+node [style=solid,color=red2, shape=circle];
+a12 a22 a32 a42 a52 a62 a72 a82 a92;
+label = "layer 2 (hidden layer)";
+}
+ 
+subgraph cluster_2 {
+color=white;
+node [style=solid,color=red2, shape=circle];
+b13 b23 b33;
+label="layer 3 (hidden layer)";
+}
+
+subgraph cluster_3 {
+color=white;
+node [style=solid,color=seagreen2, shape=circle];
+O;
+label="layer 4 (output layer)";
+}
+ 
+x1 -> a12;
+x1 -> a22;
+x1 -> a32;
+x1 -> a42;
+x1 -> a52;
+x1 -> a62;
+x1 -> a72;
+x1 -> a82;
+x1 -> a92;
+
+x2 -> a12;
+x2 -> a22;
+x2 -> a32;
+x2 -> a42;
+x2 -> a52;
+x2 -> a62;
+x2 -> a72;
+x2 -> a82;
+x2 -> a92;
+
+x3 -> a12;
+x3 -> a22;
+x3 -> a32;
+x3 -> a42;
+x3 -> a52;
+x3 -> a62;
+x3 -> a72;
+x3 -> a82;
+x3 -> a92;
+
+x4 -> a12;
+x4 -> a22;
+x4 -> a32;
+x4 -> a42;
+x4 -> a52;
+x4 -> a62;
+x4 -> a72;
+x4 -> a82;
+x4 -> a92;
+ 
+a12 -> b13;
+a22 -> b13;
+a32 -> b13;
+a42 -> b13;
+a52 -> b13;
+a62 -> b13;
+a72 -> b13;
+a82 -> b13;
+a92 -> b13;
+
+a12 -> b23;
+a22 -> b23;
+a32 -> b23;
+a42 -> b23;
+a52 -> b23;
+a62 -> b23;
+a72 -> b23;
+a82 -> b23;
+a92 -> b23;
+
+a12 -> b33;
+a22 -> b33;
+a32 -> b33;
+a42 -> b33;
+a52 -> b33;
+a62 -> b33;
+a72 -> b33;
+a82 -> b33;
+a92 -> b33;
+
+b13 -> O;
+b23 -> O;
+b33 -> O;
+
+}
